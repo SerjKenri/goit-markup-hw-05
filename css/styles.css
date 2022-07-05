@@ -123,6 +123,7 @@ ul {
 .navigation:hover,
 .navigation:focus {
     color: var(--focus-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-table {
     display: flex;
@@ -152,6 +153,7 @@ ul {
 .address:focus,
 .address:hover {
     color: var(--focus-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .svg-mail,
 .svg-phone {
@@ -216,6 +218,7 @@ height: 1rem;
 .hero-button:hover,
 .hero-button:focus {
     background-color: var(--hero-button-color-focus);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* benefits */
 .benefits-cont {
@@ -367,6 +370,8 @@ margin-bottom: 16px;
 .team-links:focus {
     color: var(--title-text-color);
     background-color: var(--focus-text-color);
+    transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .team-svg {
     fill: currentColor;
@@ -399,6 +404,7 @@ margin-bottom: 16px;
 .client-item:hover,
 .client-item:focus {
     border: 1px solid var(--hover-color);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-item + .client-item {
     margin-left: 30px;
@@ -420,6 +426,7 @@ margin-bottom: 16px;
 .client-links:hover,
 .client-links:focus {
     color: var(--hover-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* footer */
 .footer-div {
@@ -481,10 +488,13 @@ margin-bottom: 16px;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+
+
 }
 .footer-svg-links:hover,
 .footer-svg-links:focus {
     background-color: var(--hover-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-svg {
@@ -513,6 +523,7 @@ margin-bottom: 16px;
 .address-mail-tel:hover,
 .address-mail-tel:focus {
     color: var(--focus-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -546,6 +557,10 @@ margin-bottom: 16px;
     background-color: var(--focus-text-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+
+
+    transition-property: color, background-color, box-shadow, border-radius;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item + .portfolio-item {
     margin-left: 8px;
@@ -637,6 +652,20 @@ margin-bottom: 16px;
 }
 
 /* backdrop */
+.backdrop {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+}
+
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -667,12 +696,12 @@ margin-bottom: 16px;
 .backdrop-button {
     position: absolute;
 
-    left: 93%;
-    top: 1%;
+    left: 490px;
+    top: 8px;
     
     display: block;
     border: none;
     cursor: pointer;
-
-    padding: 6px 6px;
+    
+    padding: 0;
 }
